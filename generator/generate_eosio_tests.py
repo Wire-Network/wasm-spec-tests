@@ -8,7 +8,7 @@ from generated_wasm import GeneratedWASM
 from regexes import DATA_REGEX, EXPORT_REGEX, FUNC_REGEX
 from test_wasm import TestWASM
 
-from compile_eosio_tests import CompileError
+from compile_tests import CompileError
 
 def main(generated_wasm_file, test_wasm_file, out_wasm_file, map_file):
     def read_wasm_file(wasm_file):
