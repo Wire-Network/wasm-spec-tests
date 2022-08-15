@@ -12,7 +12,7 @@ def main(root, in_file, out_file):
 
     intermediate_file = 'intermediate.wasm'
     res = subprocess.run(
-        ['eosio-cpp', '-O0', '-c', in_file, '-o', intermediate_file],
+        ['cdt-cpp', '-O0', '-c', in_file, '-o', intermediate_file],
         capture_output=True
     )
     if res.returncode > 0:
@@ -20,7 +20,7 @@ def main(root, in_file, out_file):
         raise CompileError(res.stderr)
 
     res = subprocess.run(
-        ['eosio-ld', intermediate_file, '-o', out_file],
+        ['cdt-ld', intermediate_file, '-o', out_file],
         capture_output=True
     )
     if res.returncode > 0:

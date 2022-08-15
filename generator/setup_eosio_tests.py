@@ -8,9 +8,9 @@ import subprocess
 import sys
 import tempfile
 
-from compile_eosio_tests import CompileError
+from compile_tests import CompileError
 
-import compile_eosio_tests
+import compile_tests
 import generate_eosio_tests
 
 WASM_DIR = ''
@@ -117,7 +117,7 @@ def compile_wasm():
 
 def compile_eosio(f):
     d, name = f
-    compile_eosio_tests.main(
+    compile_tests.main(
         d,
         f'{name}.{d}.wasm.cpp',
         f'{name}.{d}-int.wasm',
