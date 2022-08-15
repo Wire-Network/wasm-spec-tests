@@ -1,6 +1,7 @@
 ### Build contracts with cdt if available ###
 include(ExternalProject)
 
+set(SPEC_TEST_WASM_DIR "${CMAKE_CURRENT_SOURCE_DIR}/wasms")
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/wasm_spec_tests.hpp.in ${CMAKE_CURRENT_BINARY_DIR}/include/wasm_spec_tests.hpp ESCAPE_QUOTES)
 
 ### BUILD UNIT TEST EXECUTABLE ###
