@@ -35,7 +35,7 @@ WebAssembly spec.
 
 
 ### How to generate tests
-- Run the `setup_eosio_tests.py` script with no options to see the help text.
+- Run the `setup_sysio_tests.py` script with no options to see the help text.
 
 
 ### Known Issues
@@ -43,13 +43,13 @@ WebAssembly spec.
     - Unclear how to hand alter this to have memory properly zeroed where expected.
 
 - start.7 -- Will fail if not deleted from generated tests.
-    - Imports "print" from "spectest". Changing to any of the `eosio::print` functions results in "start function must be nullary" due to their requiring a parameter.
+    - Imports "print" from "spectest". Changing to any of the `sysio::print` functions results in "start function must be nullary" due to their requiring a parameter.
 
 - globals.2 -- Delete from generated tests or it segfaults due to missing wasm.
-    - `eosio-wasm2wast` error "mutable globals cannot be exported" when converting to wast.
+    - `sysio-wasm2wast` error "mutable globals cannot be exported" when converting to wast.
         - `wasm2wat` provided by WABT handles this correctly, implying an error in CDT.
 - globals.3 -- Delete from generated tests or it segfaults due to missing wasm.
-    - `eosio-wasm2wast` error "mutable globals cannot be exported" when converting to wast.
+    - `sysio-wasm2wast` error "mutable globals cannot be exported" when converting to wast.
         - `wasm2wat` provided by WABT handles this correctly, implying an error in CDT.
 - globals.14 -- Delete from generated tests or it segfaults due to missing wasm.
     - Imports "global_i32" from "spectest".

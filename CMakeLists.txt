@@ -1,5 +1,5 @@
 # ##################################################################################################
-# Defines the eosio-wasm-spec-tests generator and generated tests
+# Defines the sysio-wasm-spec-tests generator and generated tests
 # ##################################################################################################
 cmake_minimum_required(VERSION 3.8)
 set(VERSION_MAJOR 0)
